@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner text and text content</title>
+</head>
+<body>
+    <h1>Want to see the difference innertext and textContent</h1>
+    <ul>
+        <li class="items" style="display: none;">FIrst</li>
+        <li class="items">Second</li>
+        <li class="items">Third</li>
+        <li class="items">Fourth</li>
+    </ul>
+    <script>
+        const li = document.querySelector('li');
+        console.log(li.innerText);
+        console.log(li.textContent);
+
+        const ul = document.querySelector('ul');
+        console.log(ul.innerText)
+        console.log(ul.textContent)
+        /* the difference between innrText and textContent is that whatever tags in the html either it is hidden, display-none or others it can be showed by the textContent method. but through innerText it will show only those in the browser output. such as here first li is display none so by innrText it show three items but by textContent shows four items. */
+    </script>
+</body>
+</html>

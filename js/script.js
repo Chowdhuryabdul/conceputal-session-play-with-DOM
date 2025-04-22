@@ -62,9 +62,10 @@ const bodyName = document.querySelector('body');
 /* what is the parent and child relationship in javascript */
 
 const ulListContainer = document.getElementById('li-container');
-// console.log(ulListContainer.children); how to get cildren
-// console.log(ulListContainer.parentElement) how to get parent element
-// console.log(ulListContainer.nextSibling) to get nextSibling
-// console.log(ulListContainer.previousElementSibling)
-// console.log(ulListContainer.previousSibling)
-console.log(ulListContainer.previousElementSibling.nextSibling)
+console.log(ulListContainer.children); /* how to get cildren */
+console.log(ulListContainer.parentElement) /* how to get parent element */
+console.log(ulListContainer.nextSibling) /* to get nextSibling */
+console.log(ulListContainer.previousElementSibling)
+console.log(ulListContainer.previousSibling)
+console.log(ulListContainer.previousElementSibling.nextSibling) /* the elementSiblings is used in most cases */
+

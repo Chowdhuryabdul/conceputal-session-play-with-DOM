@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML</title>
+</head>
+<body>
+    <h1>learn more about inner Html. it uses to inject a whole tag</h1>
+    <ul>
+        <li class="items">First</li>
+        <li class="items">Second</li>
+        <li class="items">Third</li>
+        <li class="items">Fourth</li>
+    </ul>
+    <script>
+        const ul = document.querySelector('ul');
+        ul.innerHTML = '<p>hello</p> ' /* this tag already injected in the browser. it will remove all the previous things */
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will see add and remove classList</title>
+</head>
+<body>
+    <H1 id="title">want to see more about</H1>
+    <ul>
+        <li class="items">First</li>
+        <li class="items">Second</li>
+        <li class="items">Third</li>
+        <li class="items">Fourth</li>
+    </ul>
+    <script>
+        /* how to add multiple class */
+        const title = document.querySelector('h1');;
+        title.classList.add('class', 'first-title', 'second', 'third')
+        title.classList.remove('second')
+        // console.log(title);
+    </script>
+</body>
+</html>

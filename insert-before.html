@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Before</title>
+</head>
+<body>
+    <h1>want to see how to insert before by the insert before method</h1>
+    <ul>
+        <li class="items">First</li>
+        <li id="second" class="items">Second</li>
+        <li class="items">Third</li>
+        <li class="items">Fourth</li>
+    </ul>
+    <script>
+        /* Insert before usually take two items - where i want to insert and before which tag want to insert */
+        const ul = document.querySelector('ul');
+        const second = document.getElementById('second');
+       const li = document.createElement('li');
+       li.innerText = 'Add new tag'
+       ul.insertBefore(li, second) /* here li is newly made tag and second is the existing tag */
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to add an element</title>
+</head>
+<body>
+    <h1>We can add an element in a better way by createElement method  rather than innerHTML method</h1>
+    <ul>
+        <li class="items">First</li>
+        <li class="items">Second</li>
+        <li class="items">Third</li>
+        <li class="items">Fourth</li>
+    </ul>
+
+    <script>
+        /* i want to add li in the ul container */
+        const ulContainer = document.querySelector('ul');
+        const li = document.createElement('li') /* i can create here section, div, li, p and others as well */
+        li.innerText ='love you'
+        ulContainer.appendChild(li)
+    </script>
+</body>
+</html>

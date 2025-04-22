@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set and get attribute</title>
+</head>
+<body>
+    <h1 id=" title" >How to se attribute and get attribute</h1>
+    <ul>
+        <li class="items">First</li>
+        <li class="items">Second</li>
+        <li class="items">Third</li>
+        <li class="items">Fourth</li>
+    </ul>
+
+
+    <script>
+        /* To romove attribute */
+        document.querySelector('h1').removeAttribute('id')
+        document.querySelector('h1').removeAttribute('class')
+
+        /* to set attribute */
+        document.querySelector('h1').setAttribute('class', 'first-heading')
+
+        /* to get attribute */
+        const attribute = document.querySelector('h1').getAttribute('id')
+        console.log(attribute);
+    </script>
+</body>
+</html>
