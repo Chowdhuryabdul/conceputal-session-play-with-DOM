@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1 class="text-3xl text-center my-5">Goriber evaly rebooted 2.0</h1>
+    <div class="w=[80%] text-center mx-auto mb-5">
+        <textarea name="" id="text-area" placeholder="leave a review" class="textarea mx-auto textarea-bordered textarea-lg w-96"></textarea>
+        <div class="text-end w-[45%] mx-auto">
+            <button id="submit-btn" class="btn btn-success  btn-sm">Submit</button>
+        </div>
+    </div>
+    <div id="review" class="user-review w-96 mx-auto">
+        <h1 class="text-3xl font-bold text-red-600">User review....</h1>
+    </div>
+
+    <script>
+        let serialCount = 1;
+        const submitBtn = document.getElementById('submit-btn').addEventListener('click', function(){
+            // const textArea = document.getElementById('text-area')
+            // const inputText = textArea.value i can wrtie these two lines into one line
+            const inputText = document.getElementById('text-area').value
+            // console.log(inputText);
+            const userReview = document.getElementById('review')
+        const p = document.createElement('p');
+        p.innerText = serialCount + ' . ' + inputText
+        userReview.appendChild(p)
+        serialCount++
+        document.getElementById('text-area').value = '';
+        })
+
+        /* if i want to do same work with clicking in the enter button in keyboard rather than clicking in the button in the screen */
+        document.getElementById('text-area').addEventListener('keyup', function(event){
+        if(event.key === 'Enter'){ /* here i have suggested specific enter key from the keyboard and mostly they used this enter button*/
+            const inputText = document.getElementById('text-area').value
+            // console.log(inputText);
+            const userReview = document.getElementById('review')
+        const p = document.createElement('p');
+        p.innerText = serialCount + ' . ' + inputText
+        userReview.appendChild(p)
+        serialCount++
+        document.getElementById('text-area').value = '';  
+        }
+        })
+       
+    </script>
+</body>
+</html>

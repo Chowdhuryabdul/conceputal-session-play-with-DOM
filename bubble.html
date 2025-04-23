@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>will see bubbble now</title>
+</head>
+<style>
+
+    div{
+        min-height: 200px;
+        min-width: 100px;
+        border-radius: 10px;
+        margin: 50px;
+        border: 2px solid black;
+    }
+    #grandparent  {
+        border : 2px solid red;
+        
+
+    }
+    #parent  {
+        border : 2px solid blue;
+        
+    }
+    #child  {
+        border : 2px solid yellow;
+        
+    }
+</style>
+<body>
+    <div id="grandparent">
+        <p>grandparent</p>
+    <div id="parent">
+        <p>parent</p>
+   
+    <div id="child">
+        <p>child</p>
+    </div>
+</div>
+
+    <script>
+        // in case of bubbling it usally bottom up model. here usually needs to take three paremeter, click, function and flase. if i want to run normal bubbling i do not need to use to write flase. but if i write true it will work upbottom modele. if it is false value- it will be bubbling and if it is true value - it will be captuering
+        const grandParent = document.getElementById('grandparent').addEventListener('click', function(){
+           
+            console.log('grandParent');
+            
+        },
+        // true
+        false
+    )
+
+        document.getElementById('parent').addEventListener('click', function(event){
+            console.log('parent')
+            event.stopPropagation()
+            
+        },
+        true 
+        // false
+       )
+        document.getElementById('child').addEventListener('click', function(){
+            console.log('child')
+            
+        },
+        // true
+        false
+    )
+    </script>
+</body>
+</html>

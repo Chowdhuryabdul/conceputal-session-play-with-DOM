@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove and remove child</title>
+</head>
+<body>
+    <h1>How to remove child</h1>
+    <ul>
+        <li class="items">First</li>
+        <li id="second" class="items">Second</li>
+        <li class="items">Third</li>
+        <li class="items">Fourth</li>
+    </ul>
+    <script>
+       /* remove Container  */ 
+       const ul = document.querySelector('ul');
+       ul.remove(ul)
+    /* removeChild */
+    const secondLi = document.getElementById('second');
+    ul.removeChild(secondLi) /* here ul is the container element and secondLi is the one i want to remove */
+    </script>
+</body>
+</html>

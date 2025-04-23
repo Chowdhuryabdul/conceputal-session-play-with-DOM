@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count project</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1 class="text-3xl text-center mt-5">Welcome to my awesome count App</h1>
+    <div class="text-center">
+        <h1 id="count" class="my-5 text-3xl font-bold">0</h1>
+    <button id="plus-btn" class="btn btn-primary" >+</button>
+    <button onclick="clickMinusBtn()" id="minus-btn" class="btn btn-success">-</button>
+    </div>
+    <script>
+        let sum = 0; ' i have made this to store the value of sum after clicking. every time when i click it will increase 1, 2, 3. so it will add the previous stored value in here with the new clicking value'
+        const seconH1 = document.getElementById('count') /* here i have decalred globally to aviod the repitation */
+        const plusBtn = document.getElementById('plus-btn').addEventListener('click', function(){
+            // console.log('thing are going fine')
+            // const seconH1 = document.getElementById('count') to avoid repetation of this one i can declare this one globally
+            // sum += 1
+            sum ++
+            seconH1.innerText = sum
+        })
+       
+       function clickMinusBtn(){
+       // const seconH1 = document.getElementById('count') to avoid repetation of this one i can declare this one globally
+       sum -=1
+         seconH1.innerText = sum
+       
+       }
+       
+    </script>
+</body>
+</html>
