@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Want to practice input more</title>
+</head>
+<body>
+    <h1 id="first-highlight">I want to practice more about the input comment</h1>
+    <textarea name="" id="text-area" cols="30" rows="10"></textarea>
+    <button id="btn-input">Click here</button>
+    <h1 id="review">people review</h1>
+    <script>
+        let serialCount = 0;
+      const inputBtn = document.getElementById('btn-input').addEventListener('click', function(){
+          const textArea = document.getElementById('text-area')
+          const value = textArea.value
+          console.log(value);
+          const peoplesReview = document.getElementById('review')
+          const p = document.createElement('p');
+          serialCount ++
+          p.innerText = serialCount + '.' + value;
+          peoplesReview.appendChild(p)
+          textArea.value = ' '
+
+      })
+    </script>
+</body>
+</html>
